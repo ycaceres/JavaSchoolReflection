@@ -1,4 +1,4 @@
-package com.nearsoft.javaschool.reflection.example.proxy;
+package com.nearsoft.javaschool.database;
 
 import java.util.LinkedList;
 import java.util.List;

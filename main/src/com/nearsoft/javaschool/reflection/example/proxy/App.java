@@ -1,5 +1,7 @@
 package com.nearsoft.javaschool.reflection.example.proxy;
 
+import com.nearsoft.javaschool.database.DatabaseActions;
+import com.nearsoft.javaschool.database.PersonDatabaseActions;
 import com.nearsoft.javaschool.domain.Person;
 
 /**

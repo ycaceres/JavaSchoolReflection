@@ -1,8 +1,8 @@
 package com.nearsoft.javaschool.reflection.letsrock.test;
 
 import com.nearsoft.javaschool.domain.Person;
-import com.nearsoft.javaschool.reflection.example.proxy.DatabaseActions;
-import com.nearsoft.javaschool.reflection.example.proxy.PersonDatabaseActions;
+import com.nearsoft.javaschool.database.DatabaseActions;
+import com.nearsoft.javaschool.database.PersonDatabaseActions;
 import com.nearsoft.javaschool.reflection.letsrock.myframework.dependencyinjection.Inject;
 import com.nearsoft.javaschool.reflection.letsrock.myframework.utest.AfterAll;
 import com.nearsoft.javaschool.reflection.letsrock.myframework.utest.AfterMethod;
