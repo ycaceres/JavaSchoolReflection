@@ -27,7 +27,7 @@ public class JsonSerializer {
             Method fieldGetter = objectClass.getMethod(getGetterMethodName(f));
             Object result = fieldGetter.invoke(source);
             String resultAsString = result != null ? result.toString() : "null";
-            values.add(f.getName() + ":" + resultAsString);
+            values.add("'" + f.getName() + "' : '" + resultAsString + "'");
         }
 
         String jsonValue = Arrays.toString(values.toArray());
@@ -40,8 +40,8 @@ public class JsonSerializer {
         String[] values = json.substring(1, json.length()).split(",\\s");
 
         for (int i = 0; i < values.length; i++) {
-            String fieldName = values[i].substring(0, values[i].indexOf(":"));
-            Object fieldValue = values[i].substring(values[i].indexOf(":") + 1);
+            String fieldName = values[i].substring(1, values[i].indexOf(":")-2);
+            Object fieldValue = values[i].substring(values[i].indexOf(":") + 3, values[i].lastIndexOf("'"));
             final Field f = target.getDeclaredField(fieldName);
 
             if(f.isAnnotationPresent(SkipJsonSerialization.class)) {
