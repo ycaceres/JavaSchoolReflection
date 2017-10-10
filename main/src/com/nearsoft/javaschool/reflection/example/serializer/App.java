@@ -12,6 +12,8 @@ public class App {
         String json = JsonSerializer.serilaize(person);
         System.out.println(json);
 
+        System.out.println("");
+
         Person samePerson = JsonSerializer.deserilaize(Person.class, json);
         System.out.println(samePerson);
     }
