@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.nearsoft.javaschool.domain.Person;
+import com.nearsoft.javaschool.reflection.example.aspects.ApplyAspect;
+import com.nearsoft.javaschool.reflection.example.aspects.TimeLogger;
 
 /**
  * Created by ycaceres on 10/4/17.
@@ -17,9 +19,12 @@ public class PersonDatabaseActions implements DatabaseActions<Person> {
     }
 
     @Override
-    public void save(Person object) {
+    @ApplyAspect(TimeLogger.class)
+    public void save(Person object) throws InterruptedException {
         persons.add(object);
         System.out.println("DATABASE >> SAVE: " + object.toString());
+        // wait 5 seconds
+        Thread.sleep(5000);
     }
 
     @Override

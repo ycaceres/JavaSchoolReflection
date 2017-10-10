@@ -3,7 +3,7 @@ package com.nearsoft.javaschool.reflection.letsrock.myframework.dependencyinject
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
-import com.nearsoft.javaschool.reflection.example.proxy.CustomInvocationHandler;
+import com.nearsoft.javaschool.reflection.example.aspects.CustomInvocationHandler;
 
 /**
  * Created by ycaceres on 10/4/17.

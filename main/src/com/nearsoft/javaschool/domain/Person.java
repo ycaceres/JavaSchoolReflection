@@ -55,11 +55,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", male=" + male +
-                '}';
+        return String.format("Person %s %s is a %d years old %s.", name, lastName, age, male ? "male" : "female");
     }
 }

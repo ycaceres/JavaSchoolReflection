@@ -43,13 +43,13 @@ public class DatabaseTest {
     }
 
     @Test
-    public void testDatabaseSave() {
+    public void testDatabaseSave() throws InterruptedException {
         databaseActions.save(this.person);
         assertIfNotContains();
     }
 
     @Test
-    public void testDatabaseDelete() {
+    public void testDatabaseDelete() throws InterruptedException {
         databaseActions.save(this.person);
         databaseActions.delete(this.person);
         assertIfContains();
