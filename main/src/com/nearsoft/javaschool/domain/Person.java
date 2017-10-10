@@ -1,12 +1,10 @@
 package com.nearsoft.javaschool.domain;
 
-import java.io.Serializable;
-
 
 /**
  * Created by ycaceres on 9/30/17.
  */
-public  class Person implements Serializable{
+public class Person {
     private String name;
     private String lastName;
     private int age;
